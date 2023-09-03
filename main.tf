@@ -137,6 +137,7 @@ resource "aws_ecs_service" "application" {
   network_configuration {
     subnets         = var.network.subnets
     security_groups = var.network.security_groups
+    assign_public_ip = var.assign_public_ip
   }
 
   dynamic "load_balancer" {
