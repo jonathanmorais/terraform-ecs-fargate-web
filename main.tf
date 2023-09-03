@@ -224,10 +224,8 @@ resource "aws_iam_role" "service" {
 }
 EOF
 
-
   tags = var.tags
 }
-
 
 resource "aws_iam_role_policy" "service" {
   name   = "ecsTaskRolePolicy-${local.service_id}"
