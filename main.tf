@@ -187,7 +187,7 @@ resource "aws_ecs_task_definition" "service" {
   cpu                   = var.container.cpu
   memory                = var.container.memory
   network_mode          = "awsvpc"
-  task_role_arn         = aws_iam_role.service.arn
+  task_role_arn         = data.aws_iam_role.ecs_task_execution_role.arn
   execution_role_arn    = data.aws_iam_role.ecs_task_execution_role.arn
   tags                  = var.tags
 
