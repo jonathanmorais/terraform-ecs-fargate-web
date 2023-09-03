@@ -1,0 +1,32 @@
+[
+  {
+    "name": "${service_id}",
+    "image": "${image}",
+    "essential": true,
+    "cpu": ${cpu
+    },
+    "memory": ${memory
+    },
+    "memoryReservation": ${memory
+    },
+    "command": ${command
+    },
+    "environment": ${environment
+    },
+    "portMappings": [
+      {
+        "containerPort": ${port
+        },
+        "hostPort": ${port
+        }
+      }
+    ],
+    "ulimits": [
+      {
+        "name": "nofile",
+        "softLimit": 65536,
+        "hardLimit": 262144
+      }
+    ]
+  }
+]
