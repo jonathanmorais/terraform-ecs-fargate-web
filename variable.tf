@@ -49,6 +49,11 @@ variable "network" {
   })
 }
 
+variable "assign_public_ip" {
+  type = bool
+  default = false
+}
+
 variable "service_policy" {
   type        = string
   description = "Policy to be attached on service execution role"
